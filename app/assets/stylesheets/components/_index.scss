@@ -3,13 +3,15 @@
 @import "avatar";
 @import "navbar";
 @import "banner";
+@import "registration";
 
 .search-header {
   width: 100%;
 }
 
 body {
-  font-family: 'Didact Gothic', sans-serif;
+font-family: 'Pathway Gothic One', sans-serif;
+color: #686565;
 }
 
 .form-control-lg {
