@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  margin: 10px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +9,24 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 200px;
+  width: 150px;
 }
+
+.burger {
+  width: 30px;
+}
+
+.dropdown-menu p, a {
+  color: #ff9a76;
+  text-shadow: none;
+}
+
+.dropdown-menu {
+  padding: 20px;
+  margin-top: 20px;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  vertical-align: center;
+}
+
+

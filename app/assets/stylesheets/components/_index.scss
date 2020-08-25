@@ -3,38 +3,28 @@
 @import "avatar";
 @import "navbar";
 @import "banner";
+@import "card";
 
 .search-header {
   width: 100%;
+  color: white;
+}
+
+.search-header {
+  font-size: 30px;
+  font-weight: 10px;
+}
+
+.search-header h2 {
+  font-weight: lighter;
 }
 
 body {
   font-family: 'Didact Gothic', sans-serif;
 }
 
-.form-control-lg {
-  width: 50%;
-  margin-top: 10px;
-}
-
 .search-flex {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.btn {
-  width: 25%;
-  margin: 15px 10px 10px 0;
-  background-color: rgba(255,234,219,1);
-  opacity: 1;
-  color: grey;
-  border-radius: 50px;
-  padding: 10px;
-  border: none;
-
-  &:hover {
-    background-color: #ff9a76;
-  }
-
 }
