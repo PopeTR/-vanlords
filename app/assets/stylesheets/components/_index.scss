@@ -17,16 +17,21 @@ color: #686565;
 }
 
 .search-header {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 10px;
 }
 
-.search-header h2 {
+.search-header h2, h1 {
   font-weight: lighter;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.search-header h1 {
+  font-size: 50px;
 }
 
 body {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Pathway Gothic One', sans-serif;
 }
 
 .search-flex {
