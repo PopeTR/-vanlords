@@ -46,8 +46,9 @@ ActiveRecord::Schema.define(version: 2020_08_24_145510) do
   create_table "vans", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "availability"
+    t.integer "availability" # 0 for unavailable, 1 for available, 2 for pending availability
     t.integer "price_per_night"
+    t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
