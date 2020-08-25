@@ -1,43 +1,19 @@
 <div class="container">
   <div class="row">
+    <% @vans.each do |van| %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card-trip">
-            <img src="https://source.unsplash.com/1600x900/?campervan" alt="campervan index" />
+          <img src="file" alt="camper-image" />
           <div class="card-trip-infos">
             <div>
-              <!-- To add the database link_to -->
-              <h2>Pauline the Passion Wagon</h2>
-              <!-- To add the database link_to -->
-              <p>Amsterdam</p>
-              <!-- To add the database link_to -->
-              <p>Sleeps 6</p>
-              <!-- To add the database link_to -->
-              <p>€112 per night</p>
-              <!-- To add the database link_to -->
+              <h2><%= link_to "#{van.title}", van_path(van.id)%></h2>
+              <p><%= "#{van.location}" %></p>
+              <p>Sleeps: <%= "#{van.size}" %></p>
+              <p>€<%="#{van.price_per_night}"%> per night</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card-trip">
-            <img src="https://source.unsplash.com/1600x900/?camper" alt="campervan index" />
-          <div class="card-trip-infos">
-            <div>
-              <!-- To add the database link_to -->
-              <h2>Colin the Camper</h2>
-              <!-- To add the database link_to -->
-              <p>Amstelveen</p>
-              <!-- To add the database link_to -->
-              <p>Sleeps 2</p>
-              <!-- To add the database link_to -->
-              <p>€90 per night</p>
-              <!-- To add the database link_to -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-
+      <% end %>
+    </div>
   </div>
-</div>
