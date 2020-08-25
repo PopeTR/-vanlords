@@ -6,4 +6,5 @@ class Van < ApplicationRecord
 	validates :title, presence: true
 	validates :price_per_night, presence: true
 	validates :size, presence: true
+	validates :location, presence: true
 end

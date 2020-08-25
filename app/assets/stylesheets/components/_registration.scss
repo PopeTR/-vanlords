@@ -1,29 +1,36 @@
+.container-forms{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container-signup {
  width: 550px;
- position: relative;
  top: 25px;
  left: 660px;
  border: solid 3px #ffeadb;
  border-radius: 5%;
  padding: 50px 50px 30px 50px;
- margin-top: 40px;
+
 }
 
 h2 {
-font-family: 'Pathway Gothic One', sans-serif;
-font-size: 32px;
-padding-bottom: 12px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 32px;
+  padding-bottom: 12px;
 }
 
 .form-inputs {
-font-family: 'Pathway Gothic One', sans-serif;
-font-size: 18px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 18px;
 }
 
 .btn {
-  font-family: 'helvetica', sans-serif;
-font-size: 14px;
-font-weight: lighter;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #686565;
+
 }
 
 
@@ -33,9 +40,10 @@ font-weight: lighter;
 
 .shared a {
   color: #686565;
-  font-size: 19px;
+  font-size: 18px;
   opacity: 0.4;
   font-weight: lighter;
+  font-family: 'Pathway Gothic One', sans-serif;
 }
 
 .shared :hover {
