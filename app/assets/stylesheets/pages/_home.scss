@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+.header-van {
+  text-align: center;
+  align-items: center;
+  padding: 20px 20px 0px 20px;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.img-wagon {
+  padding: 2px;
+}
+
+.container-camper {
+  width: 100%;
+  display: flex;
+  vertical-align: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-van h2 {
+  font-size: 20px;
+  padding-top: 5px;
+
+}
