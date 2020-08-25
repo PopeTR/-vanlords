@@ -6,8 +6,8 @@ class User < ApplicationRecord
          has_many :vans
          has_many :reviews
          has_many :bookings
-         # validates :name, presence: true
-         # validates :phone_number, presence: true
-         # validates :phone_number, uniqueness: true
-         # validates :name, uniqueness: true
+         validates :name, presence: true
+         validates :phone_number, presence: true
+         validates :phone_number, uniqueness: true
+         validates :name, uniqueness: true
 end
