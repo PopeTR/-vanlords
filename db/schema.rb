@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_08_24_145510) do
     t.text "description"
     t.integer "availability"
     t.integer "price_per_night"
+    t.integer "size"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
