@@ -3,12 +3,17 @@
 @import "avatar";
 @import "navbar";
 @import "banner";
+@import "registration";
 @import "card";
 
 .search-header {
   width: 100%;
   color: white;
 }
+
+body {
+font-family: 'Pathway Gothic One', sans-serif;
+color: #686565;
 
 .search-header {
   font-size: 30px;
