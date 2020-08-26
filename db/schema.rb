@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_08_26_094613) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,9 +55,11 @@ ActiveRecord::Schema.define(version: 2020_08_26_094613) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.bigint "vans_id"
     t.bigint "booking_id"
     t.index ["booking_id"], name: "index_reviews_on_booking_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
+    t.index ["vans_id"], name: "index_reviews_on_vans_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -95,5 +96,6 @@ ActiveRecord::Schema.define(version: 2020_08_26_094613) do
   add_foreign_key "bookings", "vans"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "vans", column: "vans_id"
   add_foreign_key "vans", "users"
 end
