@@ -1,36 +1,64 @@
 .container-forms{
-  margin-top: 40px;
+  height:660px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(rgba(1,1,1,0),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1563445046951-2e6adb308c9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+  background-position: center;
+  background-size: cover;
 }
-.container-signup {
- width: 550px;
- top: 25px;
- left: 660px;
- border: solid 3px #ffeadb;
- border-radius: 5%;
- padding: 50px 50px 30px 50px;
 
+.container-signup {
+  width: 450px;
+  top: 25px;
+  left: 660px;
+  // border: solid 3px rgba(0,0,0,0.9);
+  padding: 50px 50px 30px 50px;
+  box-shadow: 0 1px 6px;
+  background-opacity: 50%;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  color: white;
 }
 
 h2 {
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   padding-bottom: 12px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.form-inputs {
+input.form-input {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 18px;
+  color: white;
+
+}
+
+input.form-control {
+  border-bottom: 1px solid white;
+  background-color: transparent !important;
+  color: white;
+}
+
+.form-control:hover{
+  border-bottom: 1px solid white;
+  background-color: transparent !important;
+    color: white;
+
+}
+
+.form-text {
+  color: lightgrey !important;
+  opacity: 0.70;
 }
 
 .btn {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 18px;
   font-weight: lighter;
-  color: #686565;
-
+  color: white;
 }
 
 
@@ -39,14 +67,15 @@ h2 {
 }
 
 .shared a {
-  color: #686565;
   font-size: 18px;
-  opacity: 0.4;
+  opacity: 0.5;
   font-weight: lighter;
   font-family: 'Pathway Gothic One', sans-serif;
+    color: white;
+
 }
 
 .shared :hover {
-  color: #679b9b;
+  color: white;
   text-decoration: underline;
 }
