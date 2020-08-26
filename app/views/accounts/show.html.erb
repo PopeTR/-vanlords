@@ -1,0 +1,22 @@
+<div class="container-account" >
+  <div class="table">
+     <ul id="account-values" >
+       <% @current_user %>
+      <li><%= link_to "Profile", current_account_path(current_user)%></li>
+      <li><%= link_to "Bookings", current_account_path %></li>
+      <li><%= link_to "Your Van(s) Dashboard", vans_path()%></li>
+      <li><%= link_to "Homepage", root_path() %></li>
+      <br />
+      </ul>
+        </div>
+      <br />
+      <br />
+
+    <div class="account-landing">
+      <h1>Welcome on your Profile Page</h1>
+            <br />
+
+      <h2>Fetch your up-to-date bookings</h2>
+      <p><% @account.id %></p>
+    </div>
+  </div>
