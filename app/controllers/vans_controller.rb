@@ -4,7 +4,7 @@ class VansController < ApplicationController
   def index
     @vans = Van.all
     @vans = Van.geocoded
-    @vans_near = @vans.near(params[:location], 100)
+    @vans_near = @vans.near(params[:location], 20)
     @markers = @vans_near.map do |van|
       {
         lat: van.latitude,
