@@ -28,22 +28,21 @@
     <h2>Our Happy Campers</h2>
     <i class="fas fa-chevron-down"></i>
   </div>
+
 </div>
-
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?campervan)">
-    Lisbon
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?van)">
-    London
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?camper)">
-    Sydney
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?camping)">
-    Zagreb
-  </div>
+    <div class="cards">
+      <% @vans.each do |van| %>
+          <div class="card-trip-wider">
+            <%= cl_image_tag van.photo.key %>
+            <div class="card-trip-wider-infos">
+              <div>
+                <h2><%=link_to "#{van.title}", van_path(van.id)%></h2>
+                <p><%=van.location%></p>
+                <p>Sleeps: <%=van.size%></p>
+                <p>€<%=van.price_per_night%> per night</p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
 </div>
