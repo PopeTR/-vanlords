@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox, addMarkersToMap, fitMapToMarkers } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,4 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   addMarkersToMap();
   fitMapToMarkers();
+  init_autocomplete();
 });
