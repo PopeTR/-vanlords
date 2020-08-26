@@ -1,12 +1,19 @@
 .banner-show {
   height: 400px;
   overflow: hidden;
+  background-position: bottom;
+  position: relative;
 }
 
 .banner-show img {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-  background-position: center;
+  background-position: bottom;
   width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .banner-show .search-header h2 {
@@ -20,6 +27,7 @@
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   padding: 30px;
   width: 350px;
+  z-index: 1;
 }
 
 .container-description li {

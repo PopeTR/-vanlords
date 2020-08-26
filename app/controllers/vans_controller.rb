@@ -2,7 +2,6 @@ class VansController < ApplicationController
   before_action :set_van, only: [:show, :edit, :update, :destroy]
 
   def index
-    @vans = Van.all
     @vans = Van.geocoded
     @vans_near = @vans.near(params[:location], 20)
     @markers = @vans_near.map do |van|
