@@ -1,0 +1,50 @@
+.banner-show {
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-show img {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-position: center;
+  width: 100%;
+}
+
+.banner-show .search-header h2 {
+  width: 100%;
+  color: white;
+}
+
+.container-description {
+  margin: -50px 20px 20px 20px;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  padding: 30px;
+  width: 350px;
+}
+
+.container-description li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 10px;
+}
+
+
+.container-description p {
+  font-size: 20px;
+}
+
+.header-show {
+  display: flex;
+  width: 60%;
+}
+
+.header-show .img-wagon {
+  width: 60px;
+  object-fit: contain;
+  height: 70px;
+  margin: 5px;
+}
+
+.header-show h1 {
+  font-size: 60px;
+}
