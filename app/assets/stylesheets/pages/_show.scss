@@ -22,11 +22,11 @@
 }
 
 .container-description {
-  margin: -50px 20px 20px 20px;
+  margin: -150px 20px 20px 20px;
   background-color: white;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   padding: 30px;
-  width: 350px;
+  width: 300px;
   z-index: 1;
 }
 
@@ -43,7 +43,7 @@
 
 .header-show {
   display: flex;
-  width: 60%;
+  padding-bottom: 20px;
 }
 
 .header-show .img-wagon {
@@ -56,3 +56,43 @@
 .header-show h1 {
   font-size: 60px;
 }
+
+.container-show {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.show-icon {
+  width: 15px;
+  object-fit: contain;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.row .show-card {
+  margin: 0px;
+  width: 280px;
+}
+
+.description-container {
+  display: flex;
+}
+.description {
+  width: 500px;
+}
+
+.description-box {
+  padding: 20px;
+  margin-right: 50px;
+}
+
+.row .show-card .btn {
+  width: 90%;
+}
+
+.row .description-show{
+  padding-right: 30px;
+}
+
+
