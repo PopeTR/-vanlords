@@ -1,9 +1,25 @@
+.main-container {
+  display: flex;
+}
+
+#map {
+  height: 100vh;
+  width: 50vh;
+  position: sticky;
+  top: 100px;
+}
+
+.cards {
+  flex-grow: 1;
+  text-align: left;
+}
+
+
 .col-3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 0 0 25%;
-  max-width: 25%;
   margin-bottom: 20px;
 }
 
@@ -15,7 +31,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-top: 20px;
+  width: 200px;
 }
 
 .card-trip > img {
