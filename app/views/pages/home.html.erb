@@ -4,18 +4,19 @@
       <div class="search-flex">
         <h1 class="search-header">Looking for a campervan?</h1>
         <h2 class="search-header">We got you.</h2>
-        <form>
-          <input class="form-control form-control-lg" type="text" placeholder="Location">
+        <form action = "/vans" method = "GET">
+          <input class="form-control form-control-lg" type="text" placeholder="Location" name="location">
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control form-control-lg" placeholder="Start Date">
+              <input type="text" class="form-control form-control-lg" placeholder="Start Date" name="start_date">
             </div>
             <div class="col">
-              <input type="text" class="form-control form-control-lg" placeholder="End Date">
+              <input type="text" class="form-control form-control-lg" placeholder="End Date" name="end_date">
             </div>
           </div>
+          <input type ="submit" value = "Submit" class="btn btn-success">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         </form>
-        <a class="btn btn-success" href="#">Search</a>
       </div>
     </div>
   </div>
