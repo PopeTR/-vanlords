@@ -1,3 +1,16 @@
-<h1>Vans#show</h1>
-<p>Find me in app/views/vans/show.html.erb</p>
+<div class="banner-show">
+  <%= cl_image_tag @van.photo.key  %>
+</div>
 
+<div class="row">
+  <div class="container-description">
+    <ul>
+      <h2>Description:</h2>
+      <li><%= @van.description %></li>
+    </ul>
+  </div>
+
+  <div class="header-show">
+    <%= image_tag "camper.png", class: "img-wagon", alt: "camper-icon" %>
+    <h1><%= @van.title %></h1>
+  </div>
