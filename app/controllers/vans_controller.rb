@@ -11,6 +11,7 @@ class VansController < ApplicationController
         lat: van.latitude,
         lng: van.longitude
       }
+    end
   end
 
   def show
