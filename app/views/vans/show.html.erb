@@ -61,11 +61,25 @@
         </div>
       </div>
 
+      <div class="row show-card">
+        <div class="col-3">
+          <%= image_tag "picker.png", class: "show-icon"%>
+        </div>
+
+        <div class="col-9">
+          <span><%= params[:start_date] %>   to   <%= params[:end_date] %></span>
+        </div>
+      </div>
+
     <div class="row show-card">
       <div class="col-12">
-        <button type="button" class="btn btn-flat" data-toggle="modal" data-target="#exampleModal">
+        <% if current_user.nil? %>
+          <button type="button" class="btn btn-flat" data-toggle="modal" data-target="#exampleModal">
         Book Now
       </button>
+        <% else %>
+        <%= link_to "Book Now", van_booking_path(@van), class: "btn btn-flat" %>
+        <% end %>
       </div>
     </div>
 
