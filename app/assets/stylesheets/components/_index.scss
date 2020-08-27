@@ -32,12 +32,14 @@ color: #686565;
 
 body {
   font-family: 'Pathway Gothic One', sans-serif;
+
 }
 
 .search-flex {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-left: 30px;
 }
 
 .form-control.form-control-lg {

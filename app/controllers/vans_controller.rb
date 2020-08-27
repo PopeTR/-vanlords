@@ -51,4 +51,7 @@ class VansController < ApplicationController
   def set_van
     @van = Van.find(params[:id])
   end
+
+
+
 end
