@@ -1,0 +1,19 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.tab {
+  color: black;
+  margin-left: 40px;
+  text-shadow: none;
+}
+
+.tab:hover {
+  color: black;
+}
+
+.tab .active {
+  text-decoration: black;
+}
