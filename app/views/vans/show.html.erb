@@ -63,7 +63,9 @@
 
     <div class="row show-card">
       <div class="col-12">
-        <a class="btn btn-flat" href="#">Book now</a>
+        <button type="button" class="btn btn-flat" data-toggle="modal" data-target="#exampleModal">
+        Book Now
+      </button>
       </div>
     </div>
 
@@ -84,7 +86,49 @@
 </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
+        <div class="form-inputs">
+          <%= f.input :name,
+          required: true,
+          autofocus: true,
+          input_html: { autocomplete: "name" }%>
+          <%= f.input :email,
+          required: false,
+          autofocus: true,
+          input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+          required: false,
+          input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Log in" %>
+        </div>
+
+          <div class="shared">
+            <%= render "devise/shared/links" %>
+          </div>
+
+        <% end %>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
