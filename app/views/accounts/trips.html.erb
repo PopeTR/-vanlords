@@ -4,3 +4,24 @@
 <!-- it will display respectively the pending or past bookings you've made -->
 <!-- Clicking on one booking (card) will take you to that bookings -->
 
+<div role="tablist" aria-controls="upcoming-trips" class="_1oc06va">
+  <button role="tab" aria-selected="true" type="button" class="_1828yr1x">Upcoming</button>
+  <button role="tab" aria-selected="false" type="button" class="_ixon9hs">Past</button>
+</div>
+
+<div class="cards">
+  <% @all_bookings.each do |booking| %>
+  <div class="card-booking">
+    <%= cl_image_tag booking.van.photo.key %>
+          <div class="card-booking-infos">
+              <div>
+                <h2><%=link_to "#{booking.van.title}", van_path(booking.van.id)%></h2>
+                <p><%=booking.van.location%></p>
+                <p>Sleeps: <%=booking.van.size%></p>
+                <p>€<%=booking.van.price_per_night * 7%> total</p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+</div>
