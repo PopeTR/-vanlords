@@ -6,6 +6,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <div class="nav-item">
+     <% if current_user.present? %>
+      <%= current_user.email %>
+     <% end %>
+  </div>
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -21,6 +27,11 @@
           <% end %>
           <%= link_to destroy_user_session_path, :method => :delete, class: "dropdown-item" do %>
             <p>Log Out</p>
+          <% end %>
+          <% if current_user.present? %>
+            <%= link_to account_path(:id), class: "dropdown-item" do %>
+            <p>My Account</p>
+          <% end %>
           <% end %>
         </div>
       </li>
