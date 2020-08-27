@@ -2,15 +2,89 @@
   <%= cl_image_tag @van.photo.key  %>
 </div>
 
-<div class="row">
+<div class="description-container">
   <div class="container-description">
-    <ul>
-      <h2>Description:</h2>
-      <li><%= @van.description %></li>
-    </ul>
-  </div>
+      <h2>Information:</h2>
+    <div class="container-show">
+      <div class="row show-card">
+        <div class="col-3">
+          <%= image_tag "size.png", class: "show-icon"%>
+        </div>
+        <div class="col-9">
+          <p>Size: <%= @van.size %></p>
+        </div>
 
-  <div class="header-show">
-    <%= image_tag "camper.png", class: "img-wagon", alt: "camper-icon" %>
-    <h1><%= @van.title %></h1>
+        <div class="row show-card">
+        <div class="col-3">
+          <%= image_tag "location.png", class: "show-icon"%>
+        </div>
+
+        <div class="col-9">
+          <p>Located In: €<%= @van.location %></p>
+        </div>
+      </div>
+
+      <div class="row show-card">
+        <div class="col-3">
+          <%= image_tag "euro.png", class: "show-icon"%>
+        </div>
+
+        <div class="col-9">
+          <p>PPN: €<%= @van.price_per_night %></p>
+        </div>
+      </div>
+
+      <div class="row show-card">
+        <div class="col-3">
+          <%= image_tag "owner.png", class: "show-icon"%>
+        </div>
+
+        <div class="col-9">
+          <p>Owner:
+          <% user_id = @van.user_id %>
+          <%= User.find(user_id).name%></p>
+        </div>
+      </div>
+
+
+      <div class="row show-card">
+        <div class="col-3">
+          <%= image_tag "available.png", class: "show-icon"%>
+        </div>
+
+        <div class="col-9">
+          <% if @van.availability == 1 %>
+            <p>Available on your dates</p>
+          <% else %>
+            <p>Not Available on selected dates</p>
+          <% end %>
+        </div>
+      </div>
+
+    <div class="row show-card">
+      <div class="col-12">
+        <a class="btn btn-flat" href="#">Book now</a>
+      </div>
+    </div>
+
+    </div>
   </div>
+</div>
+
+<div class="col-9 container">
+  <div class="description-box">
+    <div class="row header-show">
+      <%= image_tag "camper.png", class: "img-wagon", alt: "camper-icon" %>
+      <h1><%= @van.title %></h1>
+    </div>
+    <div class="row description-show">
+      <p><%= @van.description %></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
