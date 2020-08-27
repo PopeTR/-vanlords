@@ -13,8 +13,9 @@ class AccountsController < ApplicationController
   end
 
   def booking
-    @booking = Booking.find(params[:id])
-    @van = booking.van # should find the booking_id coupled
+    # @booking = Booking.find(params[:id])
+    # @van = booking.van
+    # should find the booking_id coupled
     # van_id to display info
     # user_id to display user info of van
     # display total price (math price per night times period of time)

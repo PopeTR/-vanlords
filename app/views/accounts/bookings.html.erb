@@ -1,1 +1,17 @@
 <!-- Shows one booking -->
+
+<div class="cards">
+  <div class="card-booking">
+    <%= cl_image_tag @van.photo.key %>
+          <div class="card-booking-infos">
+              <div>
+                <h2><%=link_to "#{@van.title}", van_path(@van.id)%></h2>
+                <p><%=@van.location%></p>
+                <p>Sleeps: <%=@van.size%></p>
+                <p>€<%=@van.price_per_night * 7%> total</p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+</div>
