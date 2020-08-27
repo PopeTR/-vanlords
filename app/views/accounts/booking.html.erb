@@ -1,0 +1,28 @@
+<!-- Shows one booking -->
+<div class="big-container">
+  <div class="background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/594384/van-vw-travel-trip-594384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  </div>
+
+  <div class="container-booking">
+
+  <h1>Your Booking</h1>
+  <div class="row"><p>Current User: <%=current_user.name%></p></div>
+  <div class="row"><p>Booking Reference: <%=@booking.id%></p></div>
+  <div class="row"><p>Start Date: <%=@booking.start_date%></p></div>
+  <div class="row"><p>End Date: <%=@booking.end_date%></p></div>
+  <div class="row"><p>Van: <%=link_to "#{@van.title}", van_path(@van)%></p></div>
+  <div class="row"><p>Van: <%=@van.description%></p></div>
+  <div class="row"><p>Euros <%=@booking.total_price%></p></div>
+  <div class="row"><p>Booking Status:
+    <% if @booking.booking_status == 2  %>
+      <%= "Awaiting Confirmation From Owner"%>
+    <% elsif @booking.booking_status == 1  %>
+      <%= "Confirmed" %>
+    <% else %>
+      <%= "Booking Declined" %></p>
+    <% end %>
+
+  </div>
+</div>
+</div>
+
