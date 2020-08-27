@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+input[type=date]:invalid::-webkit-datetime-edit {
+    color: white;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
