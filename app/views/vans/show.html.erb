@@ -78,7 +78,7 @@
         Book Now
       </button>
         <% else %>
-        <%= link_to "Book Now", van_booking_path(@van), class: "btn btn-flat" %>
+        <%= link_to "Book Now", post_booking_path(id: @van.id, start_date: params[:start_date], end_date: params[:end_date]), class: "btn btn-flat", method: "post"%>
         <% end %>
       </div>
     </div>
