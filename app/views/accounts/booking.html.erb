@@ -18,10 +18,15 @@
       <%= "Awaiting Confirmation From Owner"%>
     <% elsif @booking.booking_status == 1  %>
       <%= "Confirmed" %>
-    <% else %>
-      <%= "Booking Declined" %></p>
+    <% elsif @booking.booking_status == 0 %>
+      <%= "Booking Declined" %>
+    <% elsif @booking.booking_status == 3 %>
+      <%= "Trip Completed" %></p>
     <% end %>
-
+  </div>
+  <div class="row"><% if @booking.booking_status == 3 %>
+    <%= link_to "Review your trip", new_van_review_path(@van) %>
+  <% end %>
   </div>
 </div>
 </div>
