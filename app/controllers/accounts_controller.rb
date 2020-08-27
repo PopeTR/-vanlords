@@ -12,6 +12,7 @@ class AccountsController < ApplicationController
     @all_bookings = current_user.bookings
   end
 
+
   def booking
     @booking = Booking.find(params[:id])
     @van = Van.find(@booking.van_id)
@@ -27,6 +28,22 @@ class AccountsController < ApplicationController
     @booking.total_price = (params[:end_date].to_date - params[:start_date].to_date) * @van.price_per_night
     @booking.save!
     redirect_to view_booking_path(@booking)
+  end
+
+
+   def guests
+    # get all instances of booking where user_id == current_user
+    @all_guests = current_user.guests
+  end
+
+
+  def guest
+    @booking = Booking.find(params[:id])
+    @van = booking.van # should find the booking_id coupled
+    # van_id to display info
+    # user_id to display user info of van
+    # display total price (math price per night times period of time)
+    # should have at the top a availibilty visible (confirmed, pending)
   end
 
   private

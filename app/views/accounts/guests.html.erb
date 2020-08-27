@@ -1,0 +1,25 @@
+<h1>Hello world</h1>
+
+<div class="tab-containers">
+  <div class="tab-container" id="tc-1">
+    <div class="cards">
+      <% @all_guests.each do |guest| %>
+      <div class="card-booking">
+        <% if guest.photo == nil %>
+          <%= cl_image_tag guest.photo.key %>
+           <div>
+            <p><%=guest.email%></p>
+          </div>
+        </div>
+        <% else %>
+          <%= image_tag "owner.png", class: "show-icon"%>
+           <div>
+            <p><%=guest.email%></p>
+          </div>
+        </div>
+        <% end %>
+        <div class="card-booking-infos">
+      </div>
+      <% end %>
+    </div>
+  </div>
