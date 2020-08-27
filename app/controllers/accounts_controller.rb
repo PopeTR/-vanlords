@@ -9,10 +9,12 @@ class AccountsController < ApplicationController
 
    def trips
     # get all instances of booking where user_id == current_user
-    @all_bookings = Booking.where(user_id == current_user.id)
+    @all_bookings = current_user.bookings
   end
+
   def booking
-    # should find the booking_id coupled
+    @booking = Booking.find(params[:id])
+    @van = booking.van # should find the booking_id coupled
     # van_id to display info
     # user_id to display user info of van
     # display total price (math price per night times period of time)
