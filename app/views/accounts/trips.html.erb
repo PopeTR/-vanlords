@@ -1,0 +1,9 @@
+<!-- The main page is technically empty -->
+<!-- It defaults to "Upcoming" status of the vans to display -->
+<!-- But when you click on "Pending" or "Past bookings" -->
+<!-- it will display respectively the pending or past bookings you've made -->
+<!-- Clicking on one booking (card) will take you to that bookings -->
+<%= @trips %>
+<% @all_bookings.each do |booking| %>
+<%= link_to "#{booking.title}", booking_path(booking.id)  %>
+<% end %>
