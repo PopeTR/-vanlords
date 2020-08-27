@@ -7,6 +7,18 @@ class AccountsController < ApplicationController
     # render @account
   end
 
+   def trips
+    # get all instances of booking where user_id == current_user
+    @all_bookings = Booking.where(user_id == current_user.id)
+  end
+  def booking
+    # should find the booking_id coupled
+    # van_id to display info
+    # user_id to display user info of van
+    # display total price (math price per night times period of time)
+    # should have at the top a availibilty visible (confirmed, pending)
+  end
+
   private
 
   def set_account
