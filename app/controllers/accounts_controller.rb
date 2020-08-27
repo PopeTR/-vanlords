@@ -24,8 +24,5 @@ end
 # In our application, we can reference a generic account with account_path(:id)
 # while still having current_account_path to direct the user to their own account.
 
-
-
-
 # >> we need the page to work when user is logged in.
 # >> first we need a LOG OUT / SIGN OUT page !!
