@@ -1,0 +1,5 @@
+<%= simple_form_for([@user, @review]) do |f| %>
+        <%= f.input :description, placeholder: "Leave a review..." %>
+        <%= f.input :rating, placeholder: "Fill in a rating from 0 to 5" %>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
