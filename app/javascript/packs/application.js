@@ -35,4 +35,19 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initAutocomplete();
+
+  document.querySelectorAll(".tab").forEach(item => {
+    item.addEventListener("click", event => {
+      event.preventDefault()
+      document.querySelectorAll(".tab").forEach(tab => {
+        tab.classList.remove("active")
+      })
+      document.querySelectorAll(".tab-container").forEach(tabContent => {
+        tabContent.classList.add("hidden")
+      })
+      document.querySelector(event.currentTarget.dataset.target).classList.remove("hidden")
+      event.currentTarget.classList.add("active")
+    })
+  })
+
 });
