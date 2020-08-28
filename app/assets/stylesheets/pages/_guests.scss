@@ -8,6 +8,7 @@
   width: 100%;
   // display:flex;
 align-items: center;
+
 }
 
 .container-guest {
@@ -19,7 +20,10 @@ align-items: center;
   justify-content: space-around;
 }
 
+.container.guest-high {
+  min-height: 100vh;
 
+}
 
 .cards-booking {
   overflow: hidden;
