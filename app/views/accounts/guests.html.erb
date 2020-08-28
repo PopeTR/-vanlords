@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
 
 <div class="tabs guest-tabs">
   <a href="#" class="tab active" data-target="#tc-1">Pending</a>
@@ -7,37 +7,29 @@
 </div>
 
 
-<div class="containers-guests" style="margin-bottom: 56px;margin-top: 40px;">
+  <div class="containers-guests" style="margin-bottom: 56px;margin-top: 40px;">
       <h1 class="d-flex justify-content-center" id="titlepage">Here are your guests</h1>
    </div>
-   <div class="container-guest d-flex justify-content-around">
 
-      <div class="cards-guests lg-col-3">
+   <div class="container-guest cards-guests d-flex flex-wrap">
+
         <% current_user.vans.each do |van| %>
         <% van.bookings.each do |booking| %>
 
+              <div class="cards-booking mb-4">
+                <%= cl_image_tag booking.user.photo.key %>
 
-          <div class="cards-booking">
-
-            <%= cl_image_tag booking.user.photo.key %>
-
-              <div class="cards-booking-infos">
-                <p><%=booking.end_date%></p>
-                <p><%=booking.start_date%></p>
-
-
-                <p><%=booking.user.name%></p>
-                <p><%=booking.user.email%></p>
-                <p><%=booking.user.phone_number%></p>
+                <div class="cards-booking-infos">
+                  <p><%=booking.end_date%></p>
+                  <p><%=booking.start_date%></p>
+                  <p><%=booking.user.name%></p>
+                  <p><%=booking.user.email%></p>
+                  <p><%=booking.user.phone_number%></p>
+                </div>
               </div>
 
-            </div>
-
-          </div>
-
+          <% end %>
         <% end %>
-
-        <% end %>
-</div>
+  </div>
 </div>
 
