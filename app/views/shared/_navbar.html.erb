@@ -6,14 +6,13 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="nav-item">
+<div class="nav-item">
+  <div class="nav">
      <% if current_user.present? %>
       <%= current_user.email %>
      <% end %>
   </div>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
         <img class="burger dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" <%= image_tag "Burger.png", alt: "logo-navbar", width: 30 %>
@@ -37,4 +36,5 @@
       </li>
     </ul>
   </div>
+</div>
 </div>
