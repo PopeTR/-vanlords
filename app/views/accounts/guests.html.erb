@@ -14,7 +14,7 @@
       <%= cl_image_tag booking.user.photo.key %>
       <div class="cards-booking-infos">
         <span><%=booking.start_date%> <%=booking.end_date%></span>
-        <h1><%=booking.user.name%></h1>
+        <h1><%=link_to "#{booking.user.name}", guest_path(booking.id) %></h1>
         <p><%=booking.user.email%></p>
         <p><%=booking.user.phone_number%></p>
       </div>
