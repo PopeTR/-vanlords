@@ -33,17 +33,36 @@ class AccountsController < ApplicationController
 
    def guests
     # get all instances of booking where user_id == current_user
+    @guests = current_user.guests
     @all_guests = current_user.guests
+    raise
   end
 
 
   def guest
+
     @booking = Booking.find(params[:id])
-    @van = booking.van # should find the booking_id coupled
+    @van = @booking.van
+    @guest = @booking.user
+    # should find the booking_id coupled
     # van_id to display info
     # user_id to display user info of van
     # display total price (math price per night times period of time)
     # should have at the top a availibilty visible (confirmed, pending)
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.booking_status = 1
+    @booking.save!
+    redirect_back
+  end
+
+  def decline
+    @booking = Booking.find(params[:id])
+    @booking.booking_status = 0
+    @booking.save!
+    redirect_back
   end
 
   private
