@@ -15,10 +15,12 @@ Rails.application.routes.draw do
  get 'booking/:id', to: 'accounts#booking', as: :view_booking
  post 'booking', to: 'accounts#create_booking', as: :post_booking
  get 'booking', to: 'accounts#booking'
+
   get 'guests', to: 'accounts#guests'
  get 'guest/:id', to: 'accounts#guest', as: :guest
  patch 'booking/:id/accept', to: 'accounts#accept', as: :accept_booking
  patch 'booking/:id/decline', to: 'accounts#decline', as: :decline_booking
+ get 'guest', to: 'accounts#guest'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
