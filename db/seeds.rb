@@ -101,7 +101,7 @@ Review.create(rating: 5, user_id: user1.id, description: 'The host was welcoming
 
 #Bookings/Guests_for_Plum
 
-Booking.create(start_date: '18.01.2019', end_date: '28.01.2019', total_price: 386, booking_status: 3, user_id: user1.id, van_id: van1.id)
+Booking.create(start_date: '18.01.2019', end_date: '28.01.2019', total_price: 386, booking_status: 1, user_id: user1.id, van_id: van1.id)
 
 Booking.create(start_date: '14.06.2019', end_date: '13.08.2029', total_price: 386, booking_status: 3, user_id: user2.id, van_id: van2.id)
 
@@ -121,20 +121,9 @@ Booking.create(start_date: '03.10.2020', end_date: '08.10.2020', total_price: 38
 
 #Bookings/Trips_of_Plum
 
-Booking.create(start_date: '18.01.2019', end_date: '28.01.2019', total_price: 386, booking_status: 3, user_id: user10.id, van_id: van1.id)
+Booking.create(start_date: '18.01.2019', end_date: '28.01.2019', total_price: 386, booking_status: 3, user_id: user10.id, van_id: van7.id)
 
-Booking.create(start_date: '14.06.2019', end_date: '13.08.2029', total_price: 386, booking_status: 3, user_id: user10.id, van_id: van2.id)
+Booking.create(start_date: '14.06.2019', end_date: '13.08.2029', total_price: 386, booking_status: 3, user_id: user10.id, van_id: van8.id)
 
-Booking.create(start_date: '28.04.2020', end_date: '4.05.2020', total_price: 386, booking_status: 3, user_id: user10.id, van_id: van3.id)
+Booking.create(start_date: '28.04.2020', end_date: '4.05.2020', total_price: 386, booking_status: 3, user_id: user10.id, van_id: van9.id)
 
-Booking.create(start_date: '18.09.2020', end_date: '25.09.2020', total_price: 386, booking_status: 1, user_id: user10.id, van_id: van4.id)
-
-Booking.create(start_date: '03.12.2020', end_date: '29.12.2020', total_price: 386, booking_status: 1, user_id: user10.id, van_id: van5.id)
-
-Booking.create(start_date: '22.10.2020', end_date: '25.10.2020', total_price: 386, booking_status: 1, user_id: user10.id, van_id: van6.id)
-
-Booking.create(start_date: '03.03.2021', end_date: '21.03.2021', total_price: 386, booking_status: 2, user_id: user10.id, van_id: van7.id)
-
-Booking.create(start_date: '18.11.2020', end_date: '27.11.2021', total_price: 386, booking_status: 2, user_id: user10.id, van_id: van8.id)
-
-Booking.create(start_date: '03.10.2020', end_date: '08.10.2020', total_price: 386, booking_status: 2, user_id: user10.id, van_id: van9.id)

@@ -51,7 +51,7 @@ class AccountsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.booking_status = 1
     @booking.save!
-    redirect_back
+    redirect_to "/guest/13"
   end
 
   def decline
