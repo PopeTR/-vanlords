@@ -13,7 +13,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 0;
+  z-index: -1;
 }
 
 .banner-show .search-header h2 {
@@ -21,6 +21,9 @@
   color: white;
 }
 
+.container {
+  height: 60vh;
+}
 .container-description {
   margin: -150px 20px 20px 20px;
   background-color: white;

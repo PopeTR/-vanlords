@@ -6,14 +6,13 @@
   <div class="container-booking">
 
   <h1>Your Booking</h1>
-  <div class="row"><p>Current User: <%=current_user.name%></p></div>
-  <div class="row"><p>Booking Reference: <%=@booking.id%></p></div>
-  <div class="row"><p>Start Date: <%=@booking.start_date%></p></div>
-  <div class="row"><p>End Date: <%=@booking.end_date%></p></div>
-  <div class="row"><p>Van: <%=link_to "#{@van.title}", van_path(@van)%></p></div>
-  <div class="row"><p>Van: <%=@van.description%></p></div>
+  <div class="row"><p><strong>Current User:</strong> <%=current_user.name%></p></div>
+  <div class="row"><p><strong>Booking Reference:</strong> <%=@booking.id%></p></div>
+  <div class="row"><p><strong>Start Date:</strong> <%=@booking.start_date%></p></div>
+  <div class="row"><p><strong>End Date:</strong> <%=@booking.end_date%></p></div>
+  <div class="row"><p><strong>Van:</strong> <%=link_to "#{@van.title}", van_path(@van)%></p></div>
   <div class="row"><p>Euros <%=@booking.total_price%></p></div>
-  <div class="row"><p>Booking Status:
+  <div class="row"><p><strong>Booking Status:</strong>
     <% if @booking.booking_status == 2  %>
       <%= "Awaiting Confirmation From Owner"%>
     <% elsif @booking.booking_status == 1  %>
