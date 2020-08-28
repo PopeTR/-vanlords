@@ -1,17 +1,43 @@
-<h1>Hello world</h1>
+<div class="container">
 
-<div class="tab-containers">
-  <div class="tab-container" id="tc-1">
-    <div class="cards">
-      <% @all_guests.each do |guest| %>
-      <div class="card-booking">
-          <%= cl_image_tag guest.photo.key %>
-           <div>
-            <p><%=guest.email%></p>
+<div class="tabs guest-tabs">
+  <a href="#" class="tab active" data-target="#tc-1">Pending</a>
+  <a href="#" class="tab" data-target="#tc-2">Upcoming</a>
+  <a href="#" class="tab" data-target="#tc-3">Past</a>
+</div>
+
+
+<div class="containers-guests" style="margin-bottom: 56px;margin-top: 40px;">
+      <h1 class="d-flex justify-content-center" id="titlepage">Here are your guests</h1>
+   </div>
+   <div class="container-guest d-flex justify-content-around">
+
+      <div class="cards-guests lg-col-3">
+        <% current_user.vans.each do |van| %>
+        <% van.bookings.each do |booking| %>
+
+
+          <div class="cards-booking">
+
+            <%= cl_image_tag booking.user.photo.key %>
+
+              <div class="cards-booking-infos">
+                <p><%=booking.end_date%></p>
+                <p><%=booking.start_date%></p>
+
+
+                <p><%=booking.user.name%></p>
+                <p><%=booking.user.email%></p>
+                <p><%=booking.user.phone_number%></p>
+              </div>
+
+            </div>
+
           </div>
-        </div>
-        <div class="card-booking-infos">
-      </div>
-      <% end %>
-    </div>
-  </div>
+
+        <% end %>
+
+        <% end %>
+</div>
+</div>
+
