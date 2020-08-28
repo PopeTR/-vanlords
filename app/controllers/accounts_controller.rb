@@ -32,11 +32,7 @@ class AccountsController < ApplicationController
 
 
    def guests
-    # get all instances of booking where user_id == current_user
-    @guests = current_user.guests
-    @all_guests = current_user.guests
-    raise
-  end
+   end
 
 
   def guest
