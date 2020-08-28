@@ -31,4 +31,11 @@
   vertical-align: center;
 }
 
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+}
 
+.nav {
+  color: lightgrey;
+}

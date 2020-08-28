@@ -63,6 +63,10 @@
   width: 300px;
 }
 
+.container-show .description {
+  width: 60%;
+}
+
 .show-icon {
   width: 15px;
   object-fit: contain;
@@ -99,4 +103,6 @@
   padding-right: 30px;
 }
 
-
+.simple_form .new_user {
+  color: black;
+}

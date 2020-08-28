@@ -32,14 +32,14 @@ h2 {
 input.form-input {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 18px;
-  color: white;
+  color: grey;
 
 }
 
 input.form-control {
   border-bottom: 1px solid white;
   background-color: transparent !important;
-  color: white;
+  color: grey;
 }
 
 .form-control:hover{
@@ -76,6 +76,5 @@ input.form-control {
 }
 
 .shared :hover {
-  color: white;
   text-decoration: underline;
 }
