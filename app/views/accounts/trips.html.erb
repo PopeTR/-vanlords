@@ -14,7 +14,7 @@
 <div class="tab-containers">
   <div class="tab-container" id="tc-1">
     <div class="cards">
-      <% @all_bookings.where(booking_status: 0).each do |booking| %>
+      <% @all_bookings.where(booking_status: 1).each do |booking| %>
       <div class="card-booking">
         <%= cl_image_tag booking.van.photo.key %>
         <div class="card-booking-infos">
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="tab-container hidden" id="tc-2">  <div class="cards">
-    <% @all_bookings.where(booking_status: 1).each do |booking| %>
+    <% @all_bookings.where(booking_status: 2).each do |booking| %>
     <div class="card-booking">
       <%= cl_image_tag booking.van.photo.key %>
       <div class="card-booking-infos">
@@ -47,7 +47,7 @@
 </div>
 <div class="tab-container hidden" id="tc-3">
   <div class="cards">
-    <% @all_bookings.where(booking_status: 2).each do |booking| %>
+    <% @all_bookings.where(booking_status: 3).each do |booking| %>
     <div class="card-booking">
       <%= cl_image_tag booking.van.photo.key %>
       <div class="card-booking-infos">
