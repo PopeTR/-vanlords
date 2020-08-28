@@ -14,12 +14,12 @@
 <div class="tab-containers">
   <div class="tab-container" id="tc-1">
     <div class="cards">
-      <% @all_bookings.where(booking_status: 0).each do |booking| %>
+      <% @all_bookings.where(booking_status: 2).each do |booking| %>
       <div class="card-booking">
         <%= cl_image_tag booking.van.photo.key %>
         <div class="card-booking-infos">
           <div>
-            <h2><%=link_to "#{booking.van.title}", van_path(booking.van.id)%></h2>
+            <h2><%=link_to "#{booking.van.title}", booking_path(booking.id)%></h2>
             <p><%=booking.van.location%></p>
             <p>Sleeps: <%=booking.van.size%></p>
             <p>€<%=booking.van.price_per_night * 7%> total</p>
@@ -35,7 +35,7 @@
       <%= cl_image_tag booking.van.photo.key %>
       <div class="card-booking-infos">
         <div>
-          <h2><%=link_to "#{booking.van.title}", van_path(booking.van.id)%></h2>
+          <h2><%=link_to "#{booking.van.title}", booking_path(@booking)%></h2>
           <p><%=booking.van.location%></p>
           <p>Sleeps: <%=booking.van.size%></p>
           <p>€<%=booking.van.price_per_night * 7%> total</p>
@@ -47,7 +47,7 @@
 </div>
 <div class="tab-container hidden" id="tc-3">
   <div class="cards">
-    <% @all_bookings.where(booking_status: 2).each do |booking| %>
+    <% @all_bookings.where(booking_status: 3).each do |booking| %>
     <div class="card-booking">
       <%= cl_image_tag booking.van.photo.key %>
       <div class="card-booking-infos">

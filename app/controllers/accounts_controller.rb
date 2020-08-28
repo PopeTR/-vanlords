@@ -8,6 +8,7 @@ class AccountsController < ApplicationController
   end
 
    def trips
+
     # get all instances of booking where user_id == current_user
     @all_bookings = current_user.bookings
   end
