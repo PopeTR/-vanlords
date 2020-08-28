@@ -19,18 +19,22 @@ file = URI.open('https://images.unsplash.com/photo-1504257432389-52343af06ae3?ix
 user3 = User.create(name: 'Sacha Meyer', password: 'password', phone_number: '07 8472 7162', email: "sacha.meyer@gmail.com")
 user3.photo.attach(io: file, filename: 'user3.png', content_type: 'image/png')
 
+file = URI.open('https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+user3 = User.create(name: 'Florian Bucher', password: 'Password', phone_number: '07 8472 7162', email: "florian.bucher@gmail.com")
+user3.photo.attach(io: file, filename: 'user3.png', content_type: 'image/png')
+
 #Vans
 
 file = URI.open('https://images.unsplash.com/photo-1543395136-75b39bc00e0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
-van1 = Van.create(size: 6, title: 'Big van for the whole family', location: 'Amsterdam', user_id: user1.id,  availability: 1, description: 'This campervan comfortably sleeps a family of 5. Its an amazing way to see the Netherlands.  Ideal for weekend breaks, extended touring holidays or festivals. Find the freedom of the road with unlimited milage and full insurance. Has Sony sound system cd/DVD that hooks onto iPhone. Not Local? Drop offs can be available at extra cost. Contact me for a Quote.', price_per_night: 55)
+van1 = Van.create(size: 6, title: 'Big van for the whole family', location: 'Amsterdam', user_id: 4,  availability: 1, description: 'This campervan comfortably sleeps a family of 5. Its an amazing way to see the Netherlands.  Ideal for weekend breaks, extended touring holidays or festivals. Find the freedom of the road with unlimited milage and full insurance. Has Sony sound system cd/DVD that hooks onto iPhone. Not Local? Drop offs can be available at extra cost. Contact me for a Quote.', price_per_night: 55)
 van1.photo.attach(io: file, filename: 'van1.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
-van2 = Van.create(size: 3, title: 'Cozy, stationary van, perfect for a summer holiday', location: 'Haarlem', user_id: user2.id, availability: 1, description: 'The campervan is located on a field outside of Amsterdam, right next to a lake. With the 2 bikes included in the price you can discover the surrounding arrea on a day-trip. The van includes a bathroom, fully functioning kitchen as well as a BBQ outside. The kitchen includes Glasses, cutlery, Kettle, pots pans and dishes. Fridge/freezer, electric hook up, sink and double hob, heating, entertainment system, LED lighting, Leisure battery, roll out bed and pop up roof.',  price_per_night: 80)
+van2 = Van.create(size: 3, title: 'Cozy, stationary van, perfect for a summer holiday', location: 'Haarlem', user_id: 4, availability: 1, description: 'The campervan is located on a field outside of Amsterdam, right next to a lake. With the 2 bikes included in the price you can discover the surrounding arrea on a day-trip. The van includes a bathroom, fully functioning kitchen as well as a BBQ outside. The kitchen includes Glasses, cutlery, Kettle, pots pans and dishes. Fridge/freezer, electric hook up, sink and double hob, heating, entertainment system, LED lighting, Leisure battery, roll out bed and pop up roof.',  price_per_night: 80)
 van2.photo.attach(io: file, filename: 'van2.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1513311068348-19c8fbdc0bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
-van3 = Van.create(size: 4, title: 'Brand new, luxury Maui Van', location: 'The Hague', user_id: user2.id,  availability: 1, description: 'Hire our luxurious brand new Maui Campervan for a Netherlands adventure in style! The perfect way to complete a road trip of a lifetime or to explore any of the Netherlands hidden treasures! 10% off for weekly bookings. Beautiful new professionally built interior, creating a cosy and comfortable space. Sleeps 4. Perfect for couples or a family with young children. Pull out Rock and Roll bed. Pop up roof which sleeps 1 adult or 2 small children (this is popular with the kids!). Leisure battery, so its possible to wild camp free!', price_per_night: 95)
+van3 = Van.create(size: 4, title: 'Brand new, luxury Maui Van', location: 'The Hague', user_id: user2.id,  availability: 4, description: 'Hire our luxurious brand new Maui Campervan for a Netherlands adventure in style! The perfect way to complete a road trip of a lifetime or to explore any of the Netherlands hidden treasures! 10% off for weekly bookings. Beautiful new professionally built interior, creating a cosy and comfortable space. Sleeps 4. Perfect for couples or a family with young children. Pull out Rock and Roll bed. Pop up roof which sleeps 1 adult or 2 small children (this is popular with the kids!). Leisure battery, so its possible to wild camp free!', price_per_night: 95)
 van3.photo.attach(io: file, filename: 'van3.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1502113040754-9e3e85618a00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
@@ -63,3 +67,6 @@ Review.create(rating: 5, user_id: user2.id, description: 'The host was welcoming
 
 Booking.create(start_date: '18.06.2020', end_date: '25.08.2020', total_price: 386, booking_status: 1, user_id: user3.id, van_id: van1.id)
 
+Booking.create(start_date: '18.06.2020', end_date: '25.08.2020', total_price: 386, booking_status: 1, user_id: user2.id, van_id: van2.id)
+
+Booking.create(start_date: '18.06.2020', end_date: '25.08.2020', total_price: 386, booking_status: 1, user_id: user1.id, van_id: van3.id)
